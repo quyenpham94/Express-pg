@@ -110,7 +110,7 @@ class Reservation {
   }
 
   /** Save reservation */
-
+  /** this either adds a new reservation if they're new, or update the existing record if there are changes.  */
   async save() {
     if (this.id === undefined) {
       const result = await db.query(

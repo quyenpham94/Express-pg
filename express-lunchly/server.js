@@ -1,3 +1,5 @@
+/** Functionality to start the server */
+
 /** Start server for Lunchly. */
 
 const app = require("./app");

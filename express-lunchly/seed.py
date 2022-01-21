@@ -1,3 +1,7 @@
+
+
+# Create sample data
+
 """Seed reservation system with fake data."""
 
 import random

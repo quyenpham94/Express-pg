@@ -13,9 +13,12 @@ class Customer {
     this.phone = phone;
     this.notes = notes;
   }
+  /** getter: the get syntax binds an object property to a function that will be called when that property is looked up */
+
+  /** setter: the set syntax binds an object property to a function to be called when there is an attempt to set that property */
 
   /** Methods for getting/setting notes (keep as empty string, not NULL) */
-  
+
   set notes(val) {
     this._notes = val || "";
   }
@@ -50,7 +53,8 @@ class Customer {
   }
 
   /** get a customer by ID. */
-
+  /** stactic method is known as class method in other languages. JS uses 'static' keyword to create method */
+  /** static method is used to create or clone objects */
   static async get(id) {
     const results = await db.query(
       `SELECT id, 

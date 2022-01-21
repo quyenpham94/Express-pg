@@ -1,6 +1,12 @@
+/** Application object. */
+
 /** Express app for Lunchly. */
 
 const express = require("express");
+
+/** nunjucks library is used to complete HTML templates. It is an implementation
+ * of the Jinja2 language in JS
+ */
 const nunjucks = require("nunjucks");
 const bodyParser = require("body-parser");
 const routes = require("./routes");
