@@ -18,6 +18,23 @@ router.get("/", async function(req, res, next) {
   }
 });
 
+/** Form to search a customer */
+
+router.get("/search/", async function(req, res, next) {
+  try {
+    const firstName = req.params.firstName;
+    const lastName = req.params.lastName;
+    const searchName = req.body.searchName;
+    const customers = await Customer.all();
+    if (searchName === firstName || lastName) {
+      return res.render("customer_list_search.html", {searchName, customers})
+    }
+      
+  } catch (err) {
+    return next(err);
+  }
+});
+
 /** Form to add a new customer. */
 
 router.get("/add/", async function(req, res, next) {

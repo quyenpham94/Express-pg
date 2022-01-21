@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Customers{% endblock %}
+{% block content %}
+
+<h1>Customers</h1>
+
+
+<ul style="column-count: 4">
+  {% for customer in customers %}
+    {% if searchName in customer.fullName %}
+      <p>name</p>
+      <li><a href="/{{ customer.id }}/">{{ customer.fullName }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+{% endblock %}
