@@ -77,7 +77,7 @@ router.put("/:id", async function(req, res, next) {
         if (!currPaidDate && paid) {
             paidDate = new Date();
         } else if (!paid){
-            paidDate = new Date();
+            paidDate = null;
 
         } else {
             paidDate = currPaidDate;
